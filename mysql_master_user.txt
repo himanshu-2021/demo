@@ -1,0 +1,13 @@
+
+1. sudo mysql -u root (for terminal root)
+
+2. GRANT ALL PRIVILEGES ON *.* TO 'faxdirect_admin'@localhost ; (For assigning privileges to user)
+
+3. SET PASSWORD FOR 'faxdirect_admin'@'localhost' = PASSWORD('faxdirect@321'); (for set the password);
+
+4. flush privileges;
+
+5. exit;
+
+(for dump/copy database to each other) =>  mysqldump -u faxdirect_admin --password=faxdirect@321 faxdirectadmin | mysql -u faxdirect_admin -pfaxdirect@321 faxdirect
+**first part of this command is which database have to copy and second is which database comes the copies(database) tables.
